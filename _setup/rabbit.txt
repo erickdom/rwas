@@ -1,0 +1,12 @@
+���  ~  sudo rabbitmqctl add_user usrrwas rwas2016%
+[sudo] password for erick:
+Creating user "usrrwas" ...
+���  ~  sudo rabbitmqctl add_vhost vhostrwas
+Creating vhost "vhostrwas" ...
+���  ~  sudo rabbitmqctl set_permissions -p vhostrwas usrrwas ".*" ".*" ".*"
+Setting permissions for user "usrrwas" in vhost "vhostrwas" ...
+���  ~
+
+
+"execute celery"
+celery -A apicoadsy worker --loglevel=INFO --beat
